@@ -2,6 +2,7 @@ library(shiny)
 library(DT)
 library(dplyr)
 
+options(shiny.maxRequestSize = 15*1024^2)
 shinyServer(function(input, output) {
         output$tbl <- DT::renderDataTable({
                 if((input$goButton >= input$example) & length(input$file)>0) {
