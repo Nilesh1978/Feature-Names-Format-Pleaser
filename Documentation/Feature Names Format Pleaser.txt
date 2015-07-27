@@ -1,0 +1,11 @@
+Dataframe Names Formatter
+
+The dataframe names formatter is an tiny Shiny application that makes formatting your dataframe names trivial. Too often, one received a dataset with column names that include a plethora of ridiculous punctuation marks and capitalization schemes. Before analysis of said dataset can be done, an irritating amount of work must be had to reformat the column names into a more managable display. 
+
+This formatter eliminates the amount of work required and shortens the time to analysis to near immediacy. 
+
+1. Select the file which holds the dataset you plan to analyze.
+2. Select the formatting features you would like to be run upon your dataset columns. 
+3. Copy/paste the headers and run the following command in R, replacing the "dset" variable with the one of your choosing:
+
+	names(dset)<-
