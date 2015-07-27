@@ -7,6 +7,7 @@ shinyServer(function(input, output) {
         v <- reactiveValues(d = NULL)
         v$d <- data.frame("Select data source"=c(0))
         observeEvent(input$goButton, {
+                if (is.null(input$file)) v$d <- data.frame("Select data source"=c(0))
                 v$d <- read.csv(input$file[[4]])
         })
         observeEvent(input$example, {
